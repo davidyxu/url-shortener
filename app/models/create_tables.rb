@@ -1,3 +1,5 @@
+# REV What's this file doing in your models? Migrations belong in your migration dir
+
 class CreateLinks < ActiveRecord::Migration
   def change
     create_table :links do |t|

@@ -64,7 +64,7 @@ class ConsoleInterface
       Launchy.open(url)
       Visit.record_visit(@current_user, link)
     else
-      puts "Invalid URL!!!!11111"
+      puts "Invalid URL!!!!11111" #REV excellent use of exclamation points!
     end
   end
 

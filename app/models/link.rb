@@ -9,7 +9,7 @@ class Link < ActiveRecord::Base
 
   def self.shorten(user, link)
     short_key = SecureRandom.urlsafe_base64(4)
-    url_ref = LongURL.find_by_url(link)
+    url_ref = LongURL.find_by_url(link) #REV these two lines would be better as an if..else
     url_ref = LongURL.create(:url => link) if url_ref.nil?
     Link.create(:long_url_id => url_ref.id, :shortened_link => short_key,
     :user_id => user.id)
