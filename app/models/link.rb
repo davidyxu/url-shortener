@@ -20,7 +20,8 @@ class Link < ActiveRecord::Base
   end
 
   def count_visits
-    self.visits.length
+    self.visits.length #REV: Could use just visits.count. That inserts COUNT into the SQL statement 
+                             #and leverages SQL instead of the length array method.
   end
 
   def unique_visits

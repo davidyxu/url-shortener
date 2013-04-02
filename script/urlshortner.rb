@@ -1,4 +1,6 @@
-require 'launchy'
+require 'launchy' #REV: You don't have to require launchy if its in your gemfile.
+
+#REV: nice collection of methods.
 
 class ConsoleInterface
   def initialize
